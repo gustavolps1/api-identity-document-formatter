@@ -16,7 +16,7 @@ public class DocumentFormatterController {
         this.documentFormatterService = documentFormatterService;
     }
 
-    @GetMapping("{documentType}/{documentNumber}")
+    @GetMapping
     public DocumentFormatterResponse get(@RequestParam(name = "documentNumber") String documentNumber, @RequestParam(name = "documentType") String documentType) throws Exception {
         return documentFormatterService.format(documentNumber, documentType);
     }
